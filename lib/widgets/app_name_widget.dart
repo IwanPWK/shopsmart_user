@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shimmer/shimmer.dart';
-import 'package:shopsmart_user/widgets/title_text.dart';
+import 'package:shopsmart_user/widgets/title_text_widget.dart';
 
 class AppNameTextWidget extends StatelessWidget {
   const AppNameTextWidget({super.key, this.fontSize = 30});

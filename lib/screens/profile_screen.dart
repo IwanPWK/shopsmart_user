@@ -5,8 +5,8 @@ import 'package:provider/provider.dart';
 import '../providers/theme_provider.dart';
 import '../services/assets_manager.dart';
 import '../widgets/app_name_widget.dart';
-import '../widgets/subtitle_text.dart';
-import '../widgets/title_text.dart';
+import '../widgets/subtitle_text_widget.dart';
+import '../widgets/title_text_widget.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({super.key});
@@ -84,7 +84,8 @@ class ProfileScreen extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Divider(
+                Divider(
+                  color: Theme.of(context).colorScheme.background,
                   thickness: 1,
                 ),
                 const SizedBox(
@@ -117,7 +118,8 @@ class ProfileScreen extends StatelessWidget {
                   function: () {},
                 ),
                 const SizedBox(height: 6),
-                const Divider(
+                Divider(
+                  color: Theme.of(context).colorScheme.background,
                   thickness: 1,
                 ),
                 const SizedBox(height: 6),
