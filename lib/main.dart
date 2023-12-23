@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'screens/home_screen.dart';
+import 'root_screen.dart';
 import 'providers/theme_provider.dart';
 import 'consts/theme_data.dart';
 import 'package:provider/provider.dart';
@@ -30,7 +30,7 @@ class MyApp extends StatelessWidget {
         return MaterialApp(
           title: 'ShopSmart User',
           theme: Styles.themeData(isDarkTheme: themeProvider.getIsDarkTheme),
-          home: const HomeScreen(),
+          home: const RootScreen(),
         );
       }),
     );
