@@ -4,6 +4,7 @@ import 'package:provider/provider.dart';
 
 import '../providers/theme_provider.dart';
 import '../services/assets_manager.dart';
+import '../widgets/app_name_widget.dart';
 import '../widgets/subtitle_text.dart';
 import '../widgets/title_text.dart';
 
@@ -21,7 +22,7 @@ class ProfileScreen extends StatelessWidget {
             AssetsManager.shoppingCart,
           ),
         ),
-        title: const Text("Profile screen"),
+        title: const AppNameTextWidget(),
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -38,7 +39,7 @@ class ProfileScreen extends StatelessWidget {
           Visibility(
             visible: true,
             child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+              padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 20),
               child: Row(
                 children: [
                   Container(
