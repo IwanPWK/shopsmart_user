@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 
-import '../services/assets_manager.dart';
-import '../widgets/empty_bag_widget.dart';
-import '../widgets/title_text_widget.dart';
+import '../../services/assets_manager.dart';
+import '../../widgets/empty_bag_widget.dart';
+import '../../widgets/title_text_widget.dart';
+import 'bottom_checkout.dart';
 import 'cart_widget.dart';
 
 class CartScreen extends StatelessWidget {
@@ -15,8 +16,7 @@ class CartScreen extends StatelessWidget {
             body: EmptyBagWidget(
               imagePath: AssetsManager.shoppingBasket,
               title: "Your cart is empty",
-              subtitle:
-                  "Looks like your cart is empty add something and make me happy",
+              subtitle: "Looks like your cart is empty add something and make me happy",
               buttonText: "Shop now",
             ),
           )
@@ -43,6 +43,7 @@ class CartScreen extends StatelessWidget {
                 itemBuilder: (context, index) {
                   return const CartWidget();
                 }),
+            bottomSheet: const CartBottomSheetWidget(),
           );
   }
 }

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'cart/cart_screen.dart';
+import 'screens/cart/cart_screen.dart';
 import 'screens/home_screen.dart';
 import 'screens/profile_screen.dart';
 import 'screens/search_screen.dart';
@@ -39,7 +39,7 @@ class _RootScreenState extends State<RootScreen> {
       ),
       bottomNavigationBar: NavigationBar(
         selectedIndex: currentScreen,
-        // backgroundColor: Theme.of(context).scaffoldBackgroundColor,
+        backgroundColor: Theme.of(context).scaffoldBackgroundColor,
         elevation: 10,
         height: kBottomNavigationBarHeight,
         onDestinationSelected: (index) {

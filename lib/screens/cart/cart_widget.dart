@@ -2,8 +2,8 @@ import 'package:fancy_shimmer_image/fancy_shimmer_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_iconly/flutter_iconly.dart';
 
-import '../widgets/subtitle_text_widget.dart';
-import '../widgets/title_text_widget.dart';
+import '../../widgets/subtitle_text_widget.dart';
+import '../../widgets/title_text_widget.dart';
 
 class CartWidget extends StatelessWidget {
   const CartWidget({super.key});
@@ -72,15 +72,14 @@ class CartWidget extends StatelessWidget {
                         onPressed: () {},
                         icon: const Icon(IconlyLight.arrowDown2),
                         label: const Text("Qty: 6"),
-                        style:
-                            Theme.of(context).outlinedButtonTheme.style?.merge(
-                                  OutlinedButton.styleFrom(
-                                    side: const BorderSide(width: 1),
-                                    shape: RoundedRectangleBorder(
-                                      borderRadius: BorderRadius.circular(30.0),
-                                    ),
-                                  ),
+                        style: Theme.of(context).outlinedButtonTheme.style?.merge(
+                              OutlinedButton.styleFrom(
+                                side: const BorderSide(width: 1),
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(30.0),
                                 ),
+                              ),
+                            ),
                       ),
                     ],
                   )
