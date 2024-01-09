@@ -16,8 +16,7 @@ class EmptyBagWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
-    var paddingTop = MediaQuery.of(context).padding.top;
-    print('padding left $paddingTop');
+    double paddingTop = MediaQuery.of(context).padding.top == 0.0 ? 50 : MediaQuery.of(context).padding.top;
     return SingleChildScrollView(
       physics: const BouncingScrollPhysics(),
       child: Padding(
