@@ -4,6 +4,7 @@ import 'package:flutter_iconly/flutter_iconly.dart';
 
 import '../../widgets/subtitle_text_widget.dart';
 import '../../widgets/title_text_widget.dart';
+import 'quantity_btm_sheet.dart';
 
 class CartWidget extends StatelessWidget {
   const CartWidget({super.key});
@@ -14,7 +15,7 @@ class CartWidget extends StatelessWidget {
     // combination FittedBox and IntrinsicWidth, recomendation use IntrinsicWidth as little as possible
     return FittedBox(
       child: Padding(
-        padding: const EdgeInsets.all(8.0),
+        padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 10),
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -69,7 +70,21 @@ class CartWidget extends StatelessWidget {
                       ),
                       const Spacer(),
                       OutlinedButton.icon(
-                        onPressed: () {},
+                        onPressed: () async {
+                          await showModalBottomSheet(
+                            backgroundColor: Theme.of(context).scaffoldBackgroundColor,
+                            shape: const RoundedRectangleBorder(
+                              borderRadius: BorderRadius.only(
+                                topLeft: Radius.circular(30),
+                                topRight: Radius.circular(30),
+                              ),
+                            ),
+                            context: context,
+                            builder: (context) {
+                              return const QuantityBottomSheetWidget();
+                            },
+                          );
+                        },
                         icon: const Icon(IconlyLight.arrowDown2),
                         label: const Text("Qty: 6"),
                         style: Theme.of(context).outlinedButtonTheme.style?.merge(

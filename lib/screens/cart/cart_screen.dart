@@ -7,10 +7,29 @@ import 'bottom_checkout.dart';
 import 'cart_widget.dart';
 
 class CartScreen extends StatelessWidget {
-  const CartScreen({super.key});
-  final bool isEmpty = true;
+  CartScreen({super.key});
+  final bool isEmpty = false;
+
+  final List abc = [
+    const CartWidget(),
+    const CartWidget(),
+    const CartWidget(),
+    const CartWidget(),
+    const CartWidget(),
+    const CartWidget(),
+    const CartWidget(),
+    const CartWidget(),
+    const CartWidget(),
+    const CartWidget()
+  ];
+
+  // Membuat GlobalKey untuk CartWidget
+  // final GlobalKey _cartKey = GlobalKey();
   @override
   Widget build(BuildContext context) {
+    // Mengakses dimensi dari CartWidget setelah dipasang di widget tree
+    // final RenderBox cartRenderBox = _cartKey.currentContext!.findRenderObject() as RenderBox;
+    // final cartWidgetWidth = cartRenderBox.size.width;
     return isEmpty
         ? Scaffold(
             body: EmptyBagWidget(
@@ -39,9 +58,9 @@ class CartScreen extends StatelessWidget {
               ],
             ),
             body: ListView.builder(
-                itemCount: 10,
+                itemCount: abc.length + 1,
                 itemBuilder: (context, index) {
-                  return const CartWidget();
+                  return (index >= abc.length) ? const SizedBox(height: (kBottomNavigationBarHeight + 40)) : const CartWidget();
                 }),
             bottomSheet: const CartBottomSheetWidget(),
           );

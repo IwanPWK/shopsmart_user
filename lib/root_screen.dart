@@ -20,11 +20,11 @@ class _RootScreenState extends State<RootScreen> {
   @override
   void initState() {
     super.initState();
-    screens = const [
-      HomeScreen(),
-      SearchScreen(),
+    screens = [
+      const HomeScreen(),
+      const SearchScreen(),
       CartScreen(),
-      ProfileScreen(),
+      const ProfileScreen(),
     ];
     controller = PageController(initialPage: currentScreen);
   }
