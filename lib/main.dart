@@ -7,8 +7,7 @@ import 'package:provider/provider.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
-  SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp])
-      .then((_) {
+  SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]).then((_) {
     runApp(const MyApp());
   });
 }
@@ -29,7 +28,7 @@ class MyApp extends StatelessWidget {
       child: Consumer<ThemeProvider>(builder: (context, themeProvider, child) {
         return MaterialApp(
           title: 'ShopSmart User',
-          theme: Styles.themeData(isDarkTheme: themeProvider.getIsDarkTheme),
+          theme: Styles.themeData(isDarkTheme: themeProvider.getIsDarkTheme, context: context),
           home: const RootScreen(),
         );
       }),
