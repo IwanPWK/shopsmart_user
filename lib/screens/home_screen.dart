@@ -49,6 +49,22 @@ class HomeScreen extends StatelessWidget {
                 ),
               ),
             ),
+            const SizedBox(
+              height: 15.0,
+            ),
+            const TitlesTextWidget(label: "Latest arrival"),
+            const SizedBox(
+              height: 15.0,
+            ),
+            SizedBox(
+              height: size.height * 0.16,
+              child: ListView.builder(
+                  scrollDirection: Axis.horizontal,
+                  itemCount: 10,
+                  itemBuilder: (context, index) {
+                    return const LatestArrivalProductsWidget();
+                  }),
+            )
           ],
         ),
       ),
