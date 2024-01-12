@@ -3,6 +3,7 @@ import 'package:flutter_iconly/flutter_iconly.dart';
 
 import '../../consts/validator.dart';
 import '../../widgets/app_name_widget.dart';
+import '../../widgets/auth/google_btn.dart';
 import '../../widgets/subtitle_text_widget.dart';
 import '../../widgets/title_text_widget.dart';
 
@@ -162,22 +163,43 @@ class _LoginScreenState extends State<LoginScreen> {
                       const SizedBox(
                         height: 16.0,
                       ),
-                      Row(
-                        children: [
-                          ElevatedButton(
-                            style: ElevatedButton.styleFrom(
-                              padding: const EdgeInsets.all(12.0),
-                              // backgroundColor: Colors.red,
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(
-                                  12.0,
+                      SizedBox(
+                        height: kBottomNavigationBarHeight + 10,
+                        child: Row(
+                          children: [
+                            const Expanded(
+                              flex: 2,
+                              child: SizedBox(
+                                height: kBottomNavigationBarHeight,
+                                child: FittedBox(
+                                  child: GoogleButton(),
                                 ),
                               ),
                             ),
-                            child: const Text("Guest?"),
-                            onPressed: () async {},
-                          ),
-                        ],
+                            const SizedBox(
+                              width: 8,
+                            ),
+                            Expanded(
+                              child: SizedBox(
+                                height: kBottomNavigationBarHeight,
+                                child: ElevatedButton(
+                                  style: ElevatedButton.styleFrom(
+                                    elevation: 1,
+                                    padding: const EdgeInsets.all(12.0),
+                                    // backgroundColor: Colors.red,
+                                    shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(
+                                        12.0,
+                                      ),
+                                    ),
+                                  ),
+                                  child: const Text("Guest?"),
+                                  onPressed: () async {},
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
                       ),
                       const SizedBox(
                         height: 16.0,
