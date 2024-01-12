@@ -5,6 +5,8 @@ import 'providers/theme_provider.dart';
 import 'consts/theme_data.dart';
 import 'package:provider/provider.dart';
 
+import 'screens/inner_screen/product_details.dart';
+
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
   SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]).then((_) {
@@ -30,6 +32,9 @@ class MyApp extends StatelessWidget {
           title: 'ShopSmart User',
           theme: Styles.themeData(isDarkTheme: themeProvider.getIsDarkTheme, context: context),
           home: const RootScreen(),
+          routes: {
+            ProductDetailsScreen.routName: (context) => const ProductDetailsScreen(),
+          },
         );
       }),
     );

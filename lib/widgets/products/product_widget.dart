@@ -1,10 +1,9 @@
-import 'dart:developer';
-
 import 'package:fancy_shimmer_image/fancy_shimmer_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_iconly/flutter_iconly.dart';
 
 import '../../consts/app_constants.dart';
+import '../../screens/inner_screen/product_details.dart';
 import '../subtitle_text_widget.dart';
 import '../title_text_widget.dart';
 
@@ -22,8 +21,8 @@ class _ProductWidgetState extends State<ProductWidget> {
     return Padding(
       padding: const EdgeInsets.all(0.0),
       child: GestureDetector(
-        onTap: () {
-          log("ToDo add the navigate to the product details screen");
+        onTap: () async {
+          await Navigator.pushNamed(context, ProductDetailsScreen.routName);
         },
         child: Column(
           children: [
