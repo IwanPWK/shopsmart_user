@@ -3,7 +3,7 @@ import 'dart:developer';
 import 'package:dynamic_height_grid_view/dynamic_height_grid_view.dart';
 import 'package:flutter/material.dart';
 
-import '../products/product_widget.dart';
+import '../widgets/products/product_widget.dart';
 import '../services/assets_manager.dart';
 import '../widgets/title_text_widget.dart';
 

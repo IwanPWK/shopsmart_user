@@ -4,8 +4,8 @@ import 'package:fancy_shimmer_image/fancy_shimmer_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_iconly/flutter_iconly.dart';
 
-import '../../consts/app_constants.dart';
-import 'subtitle_text_widget.dart';
+import '../../../consts/app_constants.dart';
+import '../subtitle_text_widget.dart';
 
 class LatestArrivalProductsWidget extends StatelessWidget {
   const LatestArrivalProductsWidget({super.key});
