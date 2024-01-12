@@ -6,6 +6,8 @@ import 'consts/theme_data.dart';
 import 'package:provider/provider.dart';
 
 import 'screens/inner_screen/product_details.dart';
+import 'screens/inner_screen/viewed_recently.dart';
+import 'screens/inner_screen/wishlist.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -34,6 +36,8 @@ class MyApp extends StatelessWidget {
           home: const RootScreen(),
           routes: {
             ProductDetailsScreen.routName: (context) => const ProductDetailsScreen(),
+            ViewedRecentlyScreen.routName: (context) => const ViewedRecentlyScreen(),
+            WishlistScreen.routName: (context) => const WishlistScreen(),
           },
         );
       }),

@@ -7,6 +7,8 @@ import '../services/assets_manager.dart';
 import '../widgets/app_name_widget.dart';
 import '../widgets/subtitle_text_widget.dart';
 import '../widgets/title_text_widget.dart';
+import 'inner_screen/viewed_recently.dart';
+import 'inner_screen/wishlist.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({super.key});
@@ -41,8 +43,7 @@ class ProfileScreen extends StatelessWidget {
             Visibility(
               visible: true,
               child: Padding(
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 10, vertical: 20),
+                padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 20),
                 child: Row(
                   children: [
                     Container(
@@ -51,9 +52,7 @@ class ProfileScreen extends StatelessWidget {
                       decoration: BoxDecoration(
                         shape: BoxShape.circle,
                         color: Theme.of(context).cardColor,
-                        border: Border.all(
-                            color: Theme.of(context).colorScheme.background,
-                            width: 3),
+                        border: Border.all(color: Theme.of(context).colorScheme.background, width: 3),
                         image: DecorationImage(
                           image: AssetImage(
                             AssetsManager.profilePicture,
@@ -107,12 +106,16 @@ class ProfileScreen extends StatelessWidget {
                   CustomListTile(
                     text: "Wishlist",
                     imagePath: AssetsManager.wishlistSvg,
-                    function: () {},
+                    function: () async {
+                      await Navigator.pushNamed(context, WishlistScreen.routName);
+                    },
                   ),
                   CustomListTile(
                     text: "Viewed recently",
                     imagePath: AssetsManager.recent,
-                    function: () {},
+                    function: () async {
+                      await Navigator.pushNamed(context, ViewedRecentlyScreen.routName);
+                    },
                   ),
                   CustomListTile(
                     text: "Address",
@@ -133,9 +136,7 @@ class ProfileScreen extends StatelessWidget {
                       AssetsManager.theme,
                       height: 34,
                     ),
-                    title: Text(themeProvider.getIsDarkTheme
-                        ? "Dark Mode"
-                        : "Light Mode"),
+                    title: Text(themeProvider.getIsDarkTheme ? "Dark Mode" : "Light Mode"),
                     value: themeProvider.getIsDarkTheme,
                     onChanged: (value) {
                       themeProvider.setDarkTheme(themeValue: value);

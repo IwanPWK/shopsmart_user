@@ -8,7 +8,7 @@ import 'cart_widget.dart';
 
 class CartScreen extends StatelessWidget {
   CartScreen({super.key});
-  final bool isEmpty = false;
+  final bool isEmpty = true;
 
   final List abc = [
     const CartWidget(),
