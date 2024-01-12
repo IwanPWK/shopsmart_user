@@ -4,6 +4,7 @@ import 'package:provider/provider.dart';
 
 import '../providers/theme_provider.dart';
 import '../services/assets_manager.dart';
+import '../services/my_app_functions.dart';
 import '../widgets/app_name_widget.dart';
 import '../widgets/subtitle_text_widget.dart';
 import '../widgets/title_text_widget.dart';
@@ -155,9 +156,12 @@ class ProfileScreen extends StatelessWidget {
                     ),
                   ),
                 ),
-                onPressed: () {},
                 icon: const Icon(Icons.login),
                 label: const Text("Login"),
+                onPressed: () async {
+                  await MyAppFunctions.showErrorOrWarningDialog(
+                      context: context, subtitle: "Are you sure you want to signout?", fct: () {}, isError: false);
+                },
               ),
             ),
           ],
