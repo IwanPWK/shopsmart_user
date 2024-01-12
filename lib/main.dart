@@ -5,6 +5,7 @@ import 'providers/theme_provider.dart';
 import 'consts/theme_data.dart';
 import 'package:provider/provider.dart';
 
+import 'screens/auth/login.dart';
 import 'screens/inner_screen/product_details.dart';
 import 'screens/inner_screen/viewed_recently.dart';
 import 'screens/inner_screen/wishlist.dart';
@@ -33,7 +34,7 @@ class MyApp extends StatelessWidget {
         return MaterialApp(
           title: 'ShopSmart User',
           theme: Styles.themeData(isDarkTheme: themeProvider.getIsDarkTheme, context: context),
-          home: const RootScreen(),
+          home: const LoginScreen(),
           routes: {
             ProductDetailsScreen.routName: (context) => const ProductDetailsScreen(),
             ViewedRecentlyScreen.routName: (context) => const ViewedRecentlyScreen(),
