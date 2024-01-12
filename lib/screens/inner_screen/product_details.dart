@@ -1,9 +1,9 @@
 import 'package:fancy_shimmer_image/fancy_shimmer_image.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_iconly/flutter_iconly.dart';
 import 'package:float_column/float_column.dart';
 import '../../consts/app_constants.dart';
 import '../../widgets/app_name_widget.dart';
+import '../../widgets/products/heart_btn.dart';
 import '../../widgets/subtitle_text_widget.dart';
 import '../../widgets/title_text_widget.dart';
 
@@ -86,18 +86,8 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                     padding: const EdgeInsets.symmetric(horizontal: 30),
                     child: Row(
                       children: [
-                        Container(
-                          decoration: BoxDecoration(
-                            color: Colors.blue.shade100,
-                            shape: BoxShape.circle,
-                          ),
-                          child: IconButton(
-                            style: IconButton.styleFrom(
-                              elevation: 10,
-                            ),
-                            onPressed: () {},
-                            icon: const Icon(IconlyLight.heart),
-                          ),
+                        HeartButtonWidget(
+                          bkgColor: Colors.blue.shade100,
                         ),
                         const SizedBox(
                           width: 20,

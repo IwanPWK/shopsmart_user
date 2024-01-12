@@ -5,6 +5,7 @@ import 'package:flutter_iconly/flutter_iconly.dart';
 import '../../../consts/app_constants.dart';
 import '../../screens/inner_screen/product_details.dart';
 import '../subtitle_text_widget.dart';
+import 'heart_btn.dart';
 
 class LatestArrivalProductsWidget extends StatelessWidget {
   const LatestArrivalProductsWidget({super.key});
@@ -52,12 +53,7 @@ class LatestArrivalProductsWidget extends StatelessWidget {
                         FittedBox(
                           child: Row(
                             children: [
-                              IconButton(
-                                onPressed: () {},
-                                icon: const Icon(
-                                  IconlyLight.heart,
-                                ),
-                              ),
+                              const HeartButtonWidget(),
                               IconButton(
                                 onPressed: () {},
                                 icon: const Icon(

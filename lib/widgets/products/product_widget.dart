@@ -6,6 +6,7 @@ import '../../consts/app_constants.dart';
 import '../../screens/inner_screen/product_details.dart';
 import '../subtitle_text_widget.dart';
 import '../title_text_widget.dart';
+import 'heart_btn.dart';
 
 class ProductWidget extends StatefulWidget {
   const ProductWidget({super.key});
@@ -49,12 +50,9 @@ class _ProductWidgetState extends State<ProductWidget> {
                       maxLines: 2,
                     ),
                   ),
-                  Flexible(
+                  const Flexible(
                     flex: 2,
-                    child: IconButton(
-                      onPressed: () {},
-                      icon: const Icon(IconlyLight.heart),
-                    ),
+                    child: HeartButtonWidget(),
                   ),
                 ],
               ),
